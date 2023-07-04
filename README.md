@@ -20,6 +20,8 @@ The extract_findings.py script reads the files in the top_results and sources di
 6. Calculate Thresholds
 The final script, treshold_calculator.py, reads the data from the metrics_and_findings.csv file and calculates each property's threshold. These thresholds are written to a new file called thresholds.csv, where each row corresponds to a property and contains the calculated thresholds.
 
-NOTE: As this workflow requires datasets from Di Angelo et al. and scraping from Etherscan, it is necessary to manually download and set up these datasets and ensure you have the correct access and permissions to scrape data from Etherscan. An Etherscan API is needed which can be obtained at https://etherscan.io/apis.
+NOTE: As this workflow requires datasets from Di Angelo et al. and scraping from Etherscan, it is necessary to manually download and set up these datasets and ensure you have the correct access and permissions to scrape data from Etherscan. An Etherscan API is needed, which can be obtained at https://etherscan.io/apis.
 
 NOTE: All (where possible) resulting files are pre-computed and available as artifacts in this repository.
+
+NOTE: The mappings folder contains the necessary vulnerability names detected by tools and their SWC mappings; these are obtained from https://github.com/smartbugs/smartbugs/tree/master/tools
