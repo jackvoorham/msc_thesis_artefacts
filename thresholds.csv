@@ -1,0 +1,14 @@
+Property,Threshold_Lower,Threshold_Middle,Threshold_Upper
+Coupling Between Object classes,0.0,0.0,0.5257270693512305
+Weighted Methods per Class,0,8.167912087912088,23.88888888888889
+Over/underflow,0.0,1.5516117201189945,37.31343283582089
+Unchecked return value,0.0,0.0,8.264462809917356
+Unprotected self-destruct,0.0,0.0,0.0
+Reentrancy,0.0,0.0,18.01801801801802
+Untrusted delegatecall,0.0,0.0,0.0
+DOS with failed call,0.0,0.0,0.0
+Transaction order dependence,0.0,0.0,0.0
+Auth. with tx.origin,0.0,0.0,0.0
+Timestamp dependence,0.0,0.0,0.0
+Bad random number gen,0.0,0.0,0.0
+DOS block gas limit,0.0,0.0,0.0

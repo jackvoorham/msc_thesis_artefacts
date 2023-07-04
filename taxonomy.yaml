@@ -1,0 +1,88 @@
+taxonomy:
+  - group: Malicious Transactions/Input
+    vulnerabilities:
+      - swc: 107
+        property: Reentrancy
+        cwe: 696
+        impacted: ["Integrity"]
+        tools: ["Mythril", "Conkas", "Osiris", "eThor", "Oyente"]
+      - swc: 112
+        property: Untrusted delegatecall
+        cwe: 829
+        impacted: ["Confidentiality", "Integrity", "Availability"]
+        tools: ["Mythril", "Ethainter", "Vandal"]
+  - group: Blockchain/Environment Dependency
+    vulnerabilities:
+      - swc: 116
+        property: Timestamp dependence
+        cwe: 829
+        impacted: ["Confidentiality", "Integrity", "Availability"]
+        tools: ["Mythril", "Conkas", "Osiris", "Oyente"]
+      - swc: 120
+        property: Bad random number gen
+        cwe: 330
+        impacted: ["Confidentiality", "Access Control"]
+        tools: ["Mythril"]
+      - swc: 114
+        property: Transaction order dependence
+        cwe: 362
+        impacted: ["Confidentiality", "Integrity", "Availability"]
+        tools: ["Conkas", "Osiris", "Oyente"]
+  - group: Exception and Error Handling
+    vulnerabilities:
+      - swc: 104
+        property: Unchecked return value
+        cwe: 252
+        impacted: ["Integrity", "Availability"]
+        tools: ["Mythril", "Conkas", "Vandal"]
+      - swc: 113
+        property: DOS with failed call
+        cwe: 703
+        impacted: ["Confidentiality", "Integrity", "Availability"]
+        tools: ["Mythril", "MadMax"]
+  - group: Denial of Service
+    vulnerabilities:
+      - swc: 128
+        property: DOS block gas limit
+        cwe: 400
+        impacted: ["Availability", "Access Control"]
+        tools: ["MadMax"]
+      - swc: 126
+        property: Insufficient gas griefing
+        cwe: 696
+        impacted: ["Integrity"]
+        tools: ["Maian"]
+  - group: Authentication/Access Control
+    vulnerabilities:
+      - swc: 115
+        property: Auth. with tx.origin
+        cwe: 287
+        impacted:
+          ["Confidentiality", "Integrity", "Availability", "Access Control"]
+        tools: ["Mythril", "Vandal"]
+      - swc: 106
+        property: Unprotected self-destruct
+        cwe: 749
+        impacted:
+          ["Confidentiality", "Integrity", "Availability", "Access Control"]
+        tools: ["Mythril", "Ethainter", "Maian", "Vandal"]
+  - group: Arithmetic Issues
+    vulnerabilities:
+      - swc: 101
+        property: Over/underflow
+        cwe: 191
+        impacted:
+          ["Confidentiality", "Integrity", "Availability", "Access Control"]
+        tools: ["Mythril", "Conkas", "MadMax", "Osiris"]
+  - group: Complexity
+    vulnerabilities:
+      - property: Weighted Methods per Class
+        impacted:
+          ["Confidentiality", "Integrity", "Availability", "Access Control"]
+        tools: ["Mythril", "SolMet"]
+  - group: Coupling
+    vulnerabilities:
+      - property: Coupling Between Object classes
+        impacted:
+          ["Confidentiality", "Integrity", "Availability", "Access Control"]
+        tools: ["Mythril", "SolMet"]
