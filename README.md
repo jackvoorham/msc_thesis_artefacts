@@ -1,6 +1,3 @@
-# msc_thesis_artefacts
-
-Setup
 This repository provides a workflow for constructing a robust and representative benchmark dataset for our Ethereum smart contracts security model. This benchmark is created using the top 1000 most transacted smart contracts on the Ethereum blockchain.
 
 The code for our experiments is implemented in Python, and all scripts can be found in this repository. The steps to set up the benchmark and calculate the thresholds are as follows:
