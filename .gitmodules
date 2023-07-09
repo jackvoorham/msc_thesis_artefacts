@@ -1,0 +1,3 @@
+[submodule "Tool/smartbugs"]
+	path = Tool/smartbugs
+	url = https://github.com/smartbugs/smartbugs.git

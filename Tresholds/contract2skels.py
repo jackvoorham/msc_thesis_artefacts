@@ -9,7 +9,7 @@ address_to_contract = {}
 num_contracts_to_process = 1000
 
 # Read the contracts.csv file and get all contract addresses of interest
-with open('contracts.csv', 'r') as file:
+with open('../Utils/contracts.csv', 'r') as file:
     reader = csv.reader(file)
     next(reader)  # Skip header row
     # Create a dictionary of contract addresses, all transformed to lower case,
@@ -18,7 +18,7 @@ with open('contracts.csv', 'r') as file:
     ) for row in reader if int(row[0]) <= num_contracts_to_process}
 
 # Navigate to the csv/skelcodes directory
-os.chdir('csv/skelcodes')
+os.chdir('./skelcodes') #TODO: Change to this cloned directory https://github.com/gsalzer/skelcodes
 
 # Loop through all CSV files in the directory
 for filename in glob.glob('contract2skelcode*.csv'):

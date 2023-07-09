@@ -79,10 +79,10 @@ taxonomy:
       - property: Weighted Methods per Class
         impacted:
           ["Confidentiality", "Integrity", "Availability", "Access Control"]
-        tools: ["SolMet"]
+        tools: ["Mythril", "SolMet"]
   - group: Coupling
     vulnerabilities:
       - property: Coupling Between Object classes
         impacted:
           ["Confidentiality", "Integrity", "Availability", "Access Control"]
-        tools: ["SolMet"]
+        tools: ["Mythril", "SolMet"]

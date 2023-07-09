@@ -10,7 +10,7 @@ TARGET_DIR = 'sources'
 
 # Load the contract addresses from the CSV file
 addresses = []
-with open('address_to_skelcode.csv', 'r') as file:
+with open('../Utils/address_to_skelcode.csv', 'r') as file:
     reader = csv.reader(file)
     next(reader)  # Skip header row
     for row in reader:

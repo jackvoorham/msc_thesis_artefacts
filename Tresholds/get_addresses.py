@@ -6,7 +6,7 @@ import time
 scraper = cfscrape.create_scraper()
 
 # Open the CSV file for writing
-with open('contracts.csv', 'w', newline='') as file:
+with open('../Utils/contracts.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # Write the header row
     writer.writerow(["Contract Number", "Contract Address"])

@@ -10,8 +10,8 @@ import yaml
 import csv
 
 # path to metrics_and_findings.csv
-metrics_and_findings_path = "./metrics_and_findings.csv"
-mappings_dir = './mappings'  # directory of mappings files
+metrics_and_findings_path = "./metrics_and_findings.csv" #TODO: change to metrics and findings path
+mappings_dir = '../Mappings'  # directory of mappings files
 
 
 def load_mappings(mappings_dir):
@@ -28,7 +28,7 @@ def load_mappings(mappings_dir):
 
 
 def load_taxonomy():
-    with open('taxonomy.yaml', 'r') as file:
+    with open('../Utils/taxonomy.yaml', 'r') as file:
         taxonomy_data = yaml.safe_load(file)
     return taxonomy_data['taxonomy']
 

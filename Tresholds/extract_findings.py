@@ -5,30 +5,37 @@ import csv
 import subprocess
 from collections import defaultdict
 
-root_dir = './top_results'  # directory of tool results
-mappings_dir = './mappings'  # directory of mappings files
-dir_path = "./sources"  # directory of solidity files
+mappings_dir = '../Mappings'  # directory of mappings files
+root_dir = './top_results'  # TODO: change to directory of tool results
+dir_path = "./sources"  # TODO: change to directory of solidity files
 
 
 def calculate_metrics(filename, dir_path):
     total_lloc, total_cbo, total_wmc = 0, 0, 0
     try:
-        command = ["java", "-jar", "SolMet-1.0-SNAPSHOT.jar", "-inputFile",
-                   f"{dir_path}/{filename}", "-outFile", "temp_metrics.csv"]
-        with open(os.devnull, 'w') as devnull:
-            subprocess.run(command, stdout=devnull, stderr=subprocess.STDOUT)
-        with open('temp_metrics.csv', 'r') as file:
-            reader = csv.reader(file, delimiter=';')
-            next(reader)
-            for row in reader:
-                lloc = int(row[5])
-                cbo = int(row[16])
-                wmc = int(row[8])
-                total_lloc += lloc
-                total_cbo += cbo * lloc
-                total_wmc += wmc * lloc
+        with open("temp_metrics.csv", "w") as file:
+            command = ["java", "-jar", "../Utils/SolMet-1.0-SNAPSHOT.jar", "-inputFile",
+                    f"{dir_path}/{filename}", "-outFile", "temp_metrics.csv"]
+            with open(os.devnull, 'w') as devnull:
+                subprocess.run(command, stdout=devnull, stderr=subprocess.STDOUT)
+            with open('temp_metrics.csv', 'r') as file:
+                reader = csv.reader(file, delimiter=';')
+                next(reader)
+                for row in reader:
+                    lloc = int(row[5])
+                    cbo = int(row[16])
+                    wmc = int(row[8])
+                    total_lloc += lloc
+                    total_cbo += cbo * lloc
+                    total_wmc += wmc * lloc
     except Exception as e:
         print(f"Failed to calculate metrics for {filename}. Error: {e}")
+        
+    try :
+        os.remove("temp_metrics.csv")
+    except Exception as e:
+        print(f"Failed to remove temp_metrics.csv. Error: {e}")
+        
     return total_lloc, total_cbo, total_wmc
 
 
