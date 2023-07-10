@@ -12,7 +12,7 @@ Results: Holds the final results of running the workflow for RQ2, such as metric
 
 Tool: Contains the Python script tool.py, which is the command-line tool. It also contains smartbugs as a submodule, as this is necessary for the tool to run correclty.
 
-Thresholds: Consists of Python scripts that form the core of the workflow for RQ@. These scripts extract contract addresses, determine skeleton codes, fetch source code, extract findings, compute metrics, and calculate thresholds.
+Thresholds: Consists of Python scripts that form the core of the workflow for RQ3 These scripts extract contract addresses, determine skeleton codes, fetch source code, extract findings, compute metrics, and calculate thresholds.
 
 Utils: Houses utility files, including the SolMet tool JAR file and CSV files (contracts.csv, address_to_skelcode.csv), and a taxonomy.yaml file, these are used in both the tool and treshold calculation processes.
 
